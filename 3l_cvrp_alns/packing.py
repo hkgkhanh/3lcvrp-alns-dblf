@@ -13,6 +13,8 @@ DEBUG = False  # set True for detailed placement diagnostics
 @dataclass
 class Item:
     id: str
+    type_id: str
+    rotated: bool
     mass: float
     l: int
     w: int
