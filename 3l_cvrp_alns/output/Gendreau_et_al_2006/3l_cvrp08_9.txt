@@ -1,0 +1,105 @@
+Name:				3l_cvrp08
+Problem:			3L-CVRP
+Number_of_used_Vehicles:	7
+Total_Travel_Distance:		952.9151420296405
+Calculation_Time:		225.30748438835144
+
+----------------------------------------
+Tour_Id:			0
+No_of_Customers:		2
+No_of_Items:			5
+Customer_Sequence:		8 5
+
+CustId	Id	TypeId	Rotated	x	y	z	Length	Width	Height	mass	Fragility
+5	Bt6_5_0	Bt6	0	0	0	0	21	12	14	150.0	0
+5	Bt7_5_0	Bt7	0	21	0	0	35	14	6	150.0	1
+8	Bt11_8_0	Bt11	0	21	14	0	36	11	13	50.0	0
+8	Bt12_8_0	Bt12	0	21	0	6	27	11	17	50.0	0
+8	Bt13_8_0	Bt13	0	21	14	13	34	7	16	50.0	0
+
+----------------------------------------
+Tour_Id:			1
+No_of_Customers:		5
+No_of_Items:			7
+Customer_Sequence:		2 16 15 14 17
+
+CustId	Id	TypeId	Rotated	x	y	z	Length	Width	Height	mass	Fragility
+17	Bt29_17_0	Bt29	0	0	0	0	32	13	15	125.0	0
+17	Bt30_17_0	Bt30	0	32	0	0	20	13	9	125.0	0
+14	Bt25_14_0	Bt25	0	32	13	0	21	10	10	500.0	0
+15	Bt26_15_0	Bt26	0	32	0	9	26	13	12	150.0	0
+16	Bt27_16_0	Bt27	0	53	0	0	7	13	7	50.0	0
+16	Bt28_16_0	Bt28	0	0	0	15	17	13	15	50.0	1
+2	Bt2_2_0	Bt2	0	32	13	10	17	6	11	84.0	0
+
+----------------------------------------
+Tour_Id:			2
+No_of_Customers:		3
+No_of_Items:			7
+Customer_Sequence:		18 10 13
+
+CustId	Id	TypeId	Rotated	x	y	z	Length	Width	Height	mass	Fragility
+13	Bt22_13_0	Bt22	0	0	0	0	14	9	11	83.33	0
+13	Bt23_13_0	Bt23	0	14	0	0	24	7	7	83.33	0
+13	Bt24_13_0	Bt24	0	38	0	0	15	10	8	83.33	1
+10	Bt16_10_0	Bt16	0	38	10	0	18	11	8	4100.0	0
+18	Bt31_18_0	Bt31	0	0	9	0	30	15	16	40.0	0
+18	Bt32_18_0	Bt32	0	0	9	16	32	11	9	40.0	0
+18	Bt33_18_0	Bt33	0	38	0	8	14	9	10	40.0	0
+
+----------------------------------------
+Tour_Id:			3
+No_of_Customers:		3
+No_of_Items:			8
+Customer_Sequence:		22 20 19
+
+CustId	Id	TypeId	Rotated	x	y	z	Length	Width	Height	mass	Fragility
+19	Bt34_19_0	Bt34	0	0	0	0	33	9	11	300.0	0
+19	Bt35_19_0	Bt35	0	0	9	0	30	12	7	300.0	0
+20	Bt36_20_0	Bt36	0	0	9	7	36	10	10	166.67	0
+20	Bt37_20_0	Bt37	0	0	9	17	29	10	8	166.67	0
+20	Bt38_20_0	Bt38	0	0	0	11	29	8	9	166.67	0
+22	Bt41_22_0	Bt41	0	36	0	0	18	13	11	25.0	0
+22	Bt42_22_0	Bt42	0	36	13	0	22	8	11	25.0	0
+22	Bt43_22_0	Bt43	0	36	0	11	19	12	17	25.0	1
+
+----------------------------------------
+Tour_Id:			4
+No_of_Customers:		3
+No_of_Items:			6
+Customer_Sequence:		21 4 7
+
+CustId	Id	TypeId	Rotated	x	y	z	Length	Width	Height	mass	Fragility
+7	Bt9_7_0	Bt9	0	0	0	0	15	11	17	175.0	0
+7	Bt10_7_0	Bt10	0	15	0	0	22	6	12	175.0	1
+4	Bt4_4_0	Bt4	0	15	6	0	28	14	17	250.0	1
+4	Bt5_4_0	Bt5	0	15	20	0	35	5	15	250.0	1
+21	Bt39_21_0	Bt39	0	15	6	17	24	15	8	87.5	0
+21	Bt40_21_0	Bt40	0	43	0	0	13	14	14	87.5	0
+
+----------------------------------------
+Tour_Id:			5
+No_of_Customers:		5
+No_of_Items:			8
+Customer_Sequence:		11 9 6 1 3
+
+CustId	Id	TypeId	Rotated	x	y	z	Length	Width	Height	mass	Fragility
+3	Bt3_3_0	Bt3	0	0	0	0	33	15	16	60.0	1
+1	Bt1_1_0	Bt1	0	0	15	0	34	10	13	125.0	0
+6	Bt8_6_0	Bt8	0	34	0	0	15	8	7	175.0	0
+9	Bt14_9_0	Bt14	0	0	0	16	36	13	7	550.0	0
+9	Bt15_9_0	Bt15	0	0	15	13	28	7	17	550.0	1
+11	Bt17_11_0	Bt17	0	36	8	0	20	12	9	75.0	0
+11	Bt18_11_0	Bt18	0	36	8	9	18	6	10	75.0	0
+11	Bt19_11_0	Bt19	0	0	0	23	24	7	7	75.0	1
+
+----------------------------------------
+Tour_Id:			6
+No_of_Customers:		1
+No_of_Items:			2
+Customer_Sequence:		12
+
+CustId	Id	TypeId	Rotated	x	y	z	Length	Width	Height	mass	Fragility
+12	Bt20_12_0	Bt20	0	0	0	0	34	6	15	150.0	0
+12	Bt21_12_0	Bt21	0	34	0	0	16	6	16	150.0	0
+

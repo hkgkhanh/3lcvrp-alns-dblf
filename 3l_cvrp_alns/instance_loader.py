@@ -126,6 +126,8 @@ def load_txt_instance(path: str):
                 for k in range(qty):
                     item = Item(
                         id=f"{t}_{cid}_{k}",
+                        type_id=f"{t}",
+                        rotated=False,
                         mass=spec["mass"],
                         l=spec["l"],
                         w=spec["w"],
