@@ -33,6 +33,8 @@ def main():
 
     total_runs = 0
     successful_runs = 0
+    avg_cv = 0
+    cv_count = 0
 
     print(f"Threshold: {EPSILON * 100:.1f}% of best observed solution\n")
 
@@ -46,6 +48,8 @@ def main():
         successful_runs += count_good
 
         cv = coefficient_of_variation(dists)
+        avg_cv += cv
+        cv_count += 1
 
         print(
             f"{instance}: "
@@ -59,6 +63,7 @@ def main():
     print("\n========== SUMMARY ==========")
     print(f"Successful runs: {successful_runs}/{total_runs}")
     print(f"Success ratio: {ratio:.4f}")
+    print(f"avg cv = {(avg_cv/cv_count)*100:.4f}")
 
 
 if __name__ == "__main__":
