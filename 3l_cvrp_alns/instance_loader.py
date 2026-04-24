@@ -27,11 +27,22 @@ def load_txt_instance(path: str):
     idx_customers = find("CUSTOMERS")
     idx_items = find("ITEMS")
     idx_demand = find("DEMANDS PER CUSTOMER")
+    idx_distance = None
+    try:
+        idx_distance = find("DISTANCE MATRIX")
+    except:
+        idx_distance = None
 
     vehicle_lines = lines[idx_vehicle + 1 : idx_customers]
     customer_lines = lines[idx_customers + 2 : idx_items]   # skip header
     item_lines = lines[idx_items + 2 : idx_demand]
-    demand_lines = lines[idx_demand + 2 :]
+    # demand_lines = lines[idx_demand + 2 :]
+    if idx_distance is not None:
+        demand_lines = lines[idx_demand + 2 : idx_distance]
+        distance_lines = lines[idx_distance + 1 :]
+    else:
+        demand_lines = lines[idx_demand + 2 :]
+        distance_lines = []
 
     # ---------------------------
     # STEP 2 — parse VEHICLE section
@@ -139,17 +150,36 @@ def load_txt_instance(path: str):
                     cur_customer.items.append(item)
 
     # ---------------------------
-    # STEP 6 — distance matrix from coordinates
+    # STEP 6 — parse DISTANCE MATRIX (if exists)
+    # ---------------------------
+    dist_matrix = None
+
+    if distance_lines:
+        matrix = []
+
+        for line in distance_lines:
+            parts = line.split()
+            if not parts:
+                continue
+
+            row = [float(x) for x in parts]
+            matrix.append(row)
+
+        dist_matrix = matrix
+
+    # ---------------------------
+    # STEP 7 — distance matrix from coordinates
     # ---------------------------
     # depot assumed to be customer 0
-    ids = sorted(customer_data.keys())
-    N = len(ids)
-    dist_matrix = [[0.0] * (N) for _ in range(N)]
+    if dist_matrix is None:
+        ids = sorted(customer_data.keys())
+        N = len(ids)
+        dist_matrix = [[0.0] * (N) for _ in range(N)]
 
-    for i in ids:
-        for j in ids:
-            xi, yi = customer_data[i]["x"], customer_data[i]["y"]
-            xj, yj = customer_data[j]["x"], customer_data[j]["y"]
-            dist_matrix[i][j] = ((xi - xj)**2 + (yi - yj)**2) ** 0.5
+        for i in ids:
+            for j in ids:
+                xi, yi = customer_data[i]["x"], customer_data[i]["y"]
+                xj, yj = customer_data[j]["x"], customer_data[j]["y"]
+                dist_matrix[i][j] = ((xi - xj)**2 + (yi - yj)**2) ** 0.5
 
     return vehicle, customers, dist_matrix
