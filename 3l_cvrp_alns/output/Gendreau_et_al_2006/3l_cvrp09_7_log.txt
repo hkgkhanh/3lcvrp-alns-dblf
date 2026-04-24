@@ -1,0 +1,3 @@
+New best distance of 702.019381 at 253.270605
+New best distance of 696.777426 at 280.016765
+New best distance of 690.486041 at 285.992556
